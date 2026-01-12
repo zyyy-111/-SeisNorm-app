@@ -1,0 +1,5 @@
+{
+  "name": "Copy of Copy of SeisNorm: Weighted Dispersion Normalizer",
+  "description": "A research tool for geophysics engineering focused on self-adaptive weighted normalization of surface wave dispersion spectra (F-J transform). Provides visualization and Python code generation for sub-band partitioning and Gaussian windowing.",
+  "requestFramePermissions": []
+}
