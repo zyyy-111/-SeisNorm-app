@@ -1,4 +1,3 @@
-
 name: Deploy to GitHub Pages
 
 on:
@@ -21,10 +20,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          # 删除了 cache: 'npm' 这一行，不再强制要求 package-lock.json
+          # 这里千万不要写 cache: 'npm'，因为仓库里没有 package-lock.json
 
       - name: Install dependencies
-        run: npm install
+        # 使用 --no-package-lock 避免 npm 强制检查锁定文件
+        run: npm install --no-package-lock
 
       - name: Build
         run: npm run build
